@@ -43,21 +43,77 @@ ul {
     list-style-type: none;
 }
 
-li {
-    margin-top: 2px;
+.lead-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 4px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-li a {
+.lead-item:first-child {
+    border-top: 1px solid #e0e0e0;
+}
+
+.lead-link {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     color: darkgreen;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-li a:hover {
+.lead-link:hover {
     color: rgb(6, 129, 6);
     text-decoration: underline;
+}
+
+.lead-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.copy-btn,
+.delete-item-btn {
+    margin-top: 0;
+    padding: 4px 8px;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.copy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #444;
+    border: 1px solid #ccc;
+}
+
+.copy-btn:hover {
+    background-color: #ebebeb;
+    text-decoration: none;
+}
+
+.delete-item-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    font-size: 16px;
+    line-height: 1;
+    padding: 4px 10px;
+}
+
+.delete-item-btn:hover {
+    background-color: #c82333;
+    text-decoration: none;
 }
 
 button:hover {
